@@ -1,0 +1,14 @@
+---
+- hosts: webserver
+  tasks:
+    - name: Creating my new foler
+      file:
+        path: "/home/ec2-user/my_new_folder"
+        state: directory
+        owner: ec2-user
+
+    - name: Creatin a new file
+      file:
+        path: "/home/ec2-user/my_new_folder/new_file.txt"
+        state: absent
+
